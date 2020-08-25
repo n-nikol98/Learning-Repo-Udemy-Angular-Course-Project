@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-course-project';
+  requestedComponent: string;
+
+  constructor() {
+    //Pre-set, so we don't start with a blank page
+    this.requestedComponent = 'recipes';
+  }
+
+  onHeaderListedComponentRequest(requestedComponent: string): void {
+    this.requestedComponent = requestedComponent;
+  }
 }

@@ -10,10 +10,10 @@
         <div class="navbar-collapse" [ngClass]="{'collapse': collapsed}" (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Recipes</a>
+                    <a href="#" (click)="onLinkClicked('recipes')">Recipes</a>
                 </li>
                 <li>
-                    <a href="#">Shopping List</a>
+                    <a href="#" (click)="onLinkClicked('shoppingList')">Shopping List</a>
                 </li>
             </ul>
 
