@@ -9,14 +9,17 @@ import { Ingredient } from '../../global-models/ingredient.model';
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredients: Array<Ingredient> = [
-    new Ingredient('Beef Jerky', 2),
-    new Ingredient('Orange', 4)
-  ];
+  ingredients: Array<Ingredient>;
 
-  constructor() { }
+  constructor() { 
+    this.ingredients = [];
+  }
 
   ngOnInit(): void {
+  }
+
+  onIngredientCreated(ingredient: Ingredient): void {
+    this.ingredients.push(ingredient);
   }
 
 }
